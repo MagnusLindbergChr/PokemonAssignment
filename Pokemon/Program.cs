@@ -10,11 +10,35 @@ namespace Pokemon
     {
         static void Main(string[] args)
         {
+
+            List<Move> CharmanderMoves = new List<Move>()
+            {
+                new Move("Ember"),
+                new Move("Fire Blast")
+            };
+
+            List<Move> SquirtleMoves = new List<Move>()
+            {
+                new Move("Bubble"),
+                new Move("Bite")
+            };
+
+            List<Move> BulbasurMoves = new List<Move>()
+            {
+                new Move("Cut"),
+                new Move("Mega Drain"),
+                new Move("Razor Leaf")
+            };
+
             List<Pokemon> roster = new List<Pokemon>();
 
             // INITIALIZE YOUR THREE POKEMONS HERE
 
-            Console.WriteLine("Welcome to the world of Pokemon!\nThe available commands are list/fight/heal/quit");
+            Pokemon Charmender = new Pokemon("Charmender", 3, 52, 43, 39, Elements.Fire, CharmanderMoves);
+            Pokemon Squirtle = new Pokemon("Squirtle", 2, 48, 65, 44, Elements.Water, SquirtleMoves);
+            Pokemon Bulbarsur = new Pokemon("Bulbarsur", 3, 49, 49, 45, Elements.Grass, BulbasurMoves);
+
+        Console.WriteLine("Welcome to the world of Pokemon!\nThe available commands are list/fight/heal/quit");
 
             while (true)
             {
